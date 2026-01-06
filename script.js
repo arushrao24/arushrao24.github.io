@@ -61,7 +61,7 @@ document.querySelectorAll("[data-target]").forEach(btn => {
   });
 });
 
-// Fade-in animation on scroll
+// Fade-in animation (repeats on every scroll)
 const fadeElements = document.querySelectorAll(".fade-in");
 
 const fadeInObserver = new IntersectionObserver(
@@ -69,15 +69,14 @@ const fadeInObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
       }
     });
   },
   {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 0.15
   }
 );
 
-fadeElements.forEach((el) => {
-  fadeInObserver.observe(el);
-});
+fadeElements.forEach((el) => fadeInObserver.observe(el));
