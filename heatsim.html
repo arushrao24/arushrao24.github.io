@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>heatsim | Arush Rao</title>
+  <title>Heat Diffusion Simulation | Arush Rao</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,56 +28,61 @@
 
 <!-- INTRO -->
 <section class="intro fade-in" id="intro">
-  <h1>Heat Diffusion Simulation</h1>
-  <br>
 
-  <h4>Overview</h4>
-  <ul>
-    <li>• Developed a 2D heat diffusion simulation</li>
-    <li>• Modeled temperature distribution across a rectangular domain over time</li>
-    <li>• Added functionality to simulate an internal heat source</li>
-  </ul>
-  <br>
-  <h4>My Role</h4>
-  <ul>
-    <li>• Used the finite element method and Python to implement a heat diffusion equation PDE solver</li>
-    <li>• Used explicit time-stepping schemes such as Forward Euler, Heun, and Runge-Kutta 4th order (RK4)</li>
-    <li>• Used forward and backward finite differences to calculate the heat flux at each edge</li>
-    <li>• Used Matplotlib to visualize the simulation results</li>
-    <li>• Analyzed accuracy and convergence of the three time-stepping schemes</li>
-    <li>• Used optimization methods to find the ideal location of a specified heat source for the highest average temperature</li>
-  </ul>
-  <br>
-
-  <h4>Skills</h4>
-  <p>Python • Numerical Methods • FEM • Finite Differences • Matplotlib • Numpy</p>
-
-  <div class="contact-icons">
-    <a href="mailto:arao432@gatech.edu" class="icon-link large" aria-label="Email">
-      <svg viewBox="0 0 24 24">
-        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1
-        0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8
-        5 8-5v2z"/>
-      </svg>
-    </a>
-
-    <a href="https://www.linkedin.com/in/arushrao/" target="_blank"
-       class="icon-link large" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24">
-        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0
-        3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0
-        8h5v16H0zM7.5 8h4.7v2.2h.1c.65-1.2
-        2.25-2.45 4.65-2.45 4.95 0 5.85
-        3.25 5.85 7.45V24h-5v-7.1c0-1.7
-        0-3.9-2.35-3.9-2.35 0-2.7
-        1.8-2.7 3.75V24h-5z"/>
-      </svg>
-    </a>
+  <!-- Title -->
+  <div class="sch-title">
+    <h1>Heat Diffusion Simulation</h1>
   </div>
+
+  <!-- Images -->
+  <div class="sch-images">
+    <img src="heatsimboundary.png" alt="Heat Simulation Boundary" class="sch-image">
+    <img src="heatsim.png" alt="Heat Simulation Results" class="sch-image">
+  </div>
+
+  <!-- Overview + My Role -->
+  <div class="sch-info">
+    <div class="sch-column">
+      <h3>Overview</h3>
+      <ul>
+        <li>Developed a 2D heat diffusion simulation</li>
+        <li>Modeled temperature distribution across a rectangular domain over time</li>
+        <li>Added functionality to simulate an internal heat source</li>
+    </ul>
+    </div>
+
+    <div class="sch-column">
+      <h3>My Role</h3>
+      <ul>
+        <li>Used the finite element method and Python to implement an unsteady heat diffusion equation PDE solver</li>
+        <li>Used explicit time-stepping schemes such as Forward Euler, Heun, and Runge-Kutta 4th order (RK4)</li>
+        <li>Used forward and backward finite differences to calculate the heat flux at each edge</li>
+        <li>Used Matplotlib to visualize the simulation results</li>
+        <li>Analyzed accuracy and convergence of the three time-stepping schemes</li>
+        <li>Used optimization methods to find the ideal location of a specified heat source for the highest average temperature</li>
+    </ul>
+    </div>
+  </div>
+
+  <!-- Skills -->
+<div class="sch-skills">
+  <h3>Skills</h3>
+  <div class="sch-skills-row">
+    <div class="sch-skill-card">Python</div>
+    <div class="sch-skill-card">Numerical Methods</div>
+    <div class="sch-skill-card">FEM</div>
+    <div class="sch-skill-card">Finite Differences</div>
+    <div class="sch-skill-card">Matplotlib</div>
+    <div class="sch-skill-card">Numpy</div>
+  </div>
+</div>
+<br>
+<br>
+
 </section>
 
   <!-- Back Button -->
-  <a href="index.html" class="resume-back">← Back to Home</a>
+  <a href="index.html" class="resume-back view-more-btn">←</a>
 
 </div>
 
