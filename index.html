@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arush Rao | Engineering Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<body>
+
+<!-- Floating Navigation -->
+<nav id="floating-nav">
+  <button class="nav-btn" data-target="about">About</button>
+  <button class="nav-btn" data-target="projects">Projects</button>
+  <a href="resume.html" class="nav-btn">Resume</a>
+</nav>
+
+<!-- Theme Toggle -->
+<button id="theme-toggle" aria-label="Toggle light/dark mode">
+  <svg id="sun-icon" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4" />
+    <line x1="12" y1="1" x2="12" y2="4" />
+    <line x1="12" y1="20" x2="12" y2="23" />
+    <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+    <line x1="1" y1="12" x2="4" y2="12" />
+    <line x1="20" y1="12" x2="23" y2="12" />
+    <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+  </svg>
+
+  <svg id="moon-icon" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+  </svg>
+</button>
+
+<!-- HERO -->
+<header class="hero">
+  <!-- LEFT: Text Content -->
+  <div class="hero-left">
+    <h1>Hi, I'm Arush Rao</h1>
+    <p>Junior at Georgia Tech | B.S. Mechanical Engineering</p>
+    <div class="hero-interest-icons">
+      <i data-lucide="settings"></i>
+      <i data-lucide="car"></i>
+      <i data-lucide="plane"></i>
+    </div>
+
+
+    <div class="hero-buttons">
+      <button class="hero-btn primary" data-target="about">About Me</button>
+      <button class="hero-btn primary" data-target="projects">Projects</button>
+      <a href="resume.html" class="hero-btn primary">Resume</a>
+    </div>
+
+    <div class="hero-icons">
+      <a href="mailto:arao432@gatech.edu" class="icon-link large" aria-label="Email">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/arushrao/" target="_blank"
+         class="icon-link large" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5
+          1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM7.5
+          8h4.7v2.2h.1c.65-1.2 2.25-2.45 4.65-2.45
+          4.95 0 5.85 3.25 5.85 7.45V24h-5v-7.1c0-1.7
+          0-3.9-2.35-3.9-2.35 0-2.7 1.8-2.7
+          3.75V24h-5z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- RIGHT: Image -->
+  <div class="hero-right">
+    <img src="headshot.jpeg" alt="Headshot of Arush Rao" class="hero-image">
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about fade-in" id="about">
+  <h2>About Me <i data-lucide="user"></i></h2>
+
+  <!-- ROW 1: Bio + Education -->
+  <div class="about-grid">
+    <div class="about-content">
+      <p>
+        I am a junior at Georgia Tech pursuing my B.S. in Mechanical Engineering and minor in
+        Computational Data Analysis.
+      </p>
+      <p>
+        Ever since I was young, I have been fascinated by things that move.
+        Cars, planes, rockets and trains all captured my imagination and curiosity.
+        My path to engineering began with building countless LEGOs, robots, and gaining extensive 3D printing experience 
+        all before middle school.
+        The same passion for designing and building carries me forward today as a mechanical engineer. 
+        </p>
+        <p>
+        I aspire to work in the automotive and aerospace industries, creating the next generation of vehicles that push 
+        the boundaries of performance, efficiency, quality, and sustainability.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="section-label">Education <i data-lucide="graduation-cap"></i></h3>
+      <div class="stacked-cards">
+        <div class="about-card fade-in">
+          <h4>Georgia Institute of Technology</h4>
+          <p>B.S. Mechanical Engineering</p>
+          <p>Minor in Computational Data Analysis</p>
+          <br>
+          <p>Grade Level: Junior | GPA: 4.0</p>
+          <span>Graduation (Expected): May 2028</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Experience + Skills -->
+  <div class="about-grid secondary">
+    <div>
+      <h3 class="section-label">Experience <i data-lucide="building"></i></h3>
+      <div class="stacked-cards">
+        <div class="about-card fade-in">
+          <h4>BMW Manufacturing Co.</h4>
+          <p>Manufacturing Process Improvement Co-op</p>
+          <span>January 2026 - Present</span>
+        </div>
+
+        <div class="about-card fade-in">
+          <h4>Hytech Racing</h4>
+          <p>Aerodynamicist & Composites Engineer for Formula SAE EV team</p>
+          <span>August 2024 - Present</span>
+        </div>
+
+        <div class="about-card fade-in">
+          <h4>Exascale CFD</h4>
+          <p>Student researcher studying liquid rocket 
+            engine injector behavior and combustion</p>
+          <span>August 2025 - Dec 2025</span>
+        </div>
+
+        <div class="about-card fade-in">
+          <h4>Advanced Manufacturing Pilot Facility</h4>
+          <p>Student Researcher in Additive Manufacturing</p>
+          <span>February 2025 - Dec 2025</span>
+        </div>
+      </div>
+      
+      <a href="resume.html" class="view-more-btn fade-in">
+        View Details →
+      </a>
+    </div>
+
+    <div>
+      <h3 class="section-label">Skills <i data-lucide="toolbox"></i></h3>
+      <div class="stacked-cards">
+        <div class="about-card fade-in">
+          <h4>CAD</h4>
+          <p>CATIA 3DX, SolidWorks, Inventor, Fusion 360</p>
+        </div>
+        <div class="about-card fade-in">
+          <h4>Simulation</h4>
+          <p>Ansys Fluent (CFD), Ansys FEA, Abaqus</p>
+        </div>
+        <div class="about-card fade-in">
+          <h4>Programming & Analysis</h4>
+          <p>Python, MATLAB, Java, Arduino, Microsoft Excel</p>
+        </div>
+        <div class="about-card fade-in">
+          <h4>Fabrication</h4>
+          <p>3D Printing, Milling, Lathe, Bandsaw, Laser Cutting, Composites, Woodworking</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects fade-in" id="projects">
+  <h2>Projects <i data-lucide="wrench"></i></h2>
+  <div class="projects-grid">
+
+    <div class="project-card fade-in">
+      <h3>Schlieren Imaging System</h3>
+      <p>Designed and built carrier gas flow visualization system for a DED printer.</p>
+      <a href="schlieren.html" class="view-more-btn fade-in">
+        Read More →
+      </a>
+    </div>
+
+    <div class="project-card fade-in">
+      <h3>FSAE Rear Wing 3rd Element</h3>
+      <p>Designed an aerodynamic wing element to improve vehicle performance.</p>
+      <a href="rwe3.html" class="view-more-btn fade-in">
+        Read More →
+      </a>
+    </div>
+
+    <div class="project-card fade-in">
+      <h3>Heat Diffusion Simulation</h3>
+      <p>Modeled transient unsteady heat diffusion using numerical methods.</p>
+      <a href="heatsim.html" class="view-more-btn fade-in">
+        Read More →
+      </a>
+    </div>
+
+    <div class="project-card fade-in">
+      <h3>Hobgobbler Robot</h3>
+      <p>Multi-functional competition robot built from scratch.</p>
+      <a href="2110.html" class="view-more-btn fade-in">
+        Read More →
+      </a>
+    </div>
+
+    <div class="project-card fade-in">
+      <h3>E-Mobility Docking Station</h3>
+      <p>Modular docking station designed for usability and sustainibility.</p>
+      <a href="scooter.html" class="view-more-btn fade-in">
+        Read More →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact fade-in" id="contact">
+  <h2>Contact <i data-lucide="message-square"></i></h2>
+  <p>Feel free to reach out for opportunities, collaboration or just to talk engineering!</p>
+
+  <div class="contact-icons">
+    <a href="mailto:arao432@gatech.edu" class="icon-link large" aria-label="Email">
+      <svg viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1
+        0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8
+        5 8-5v2z"/>
+      </svg>
+    </a>
+
+    <a href="https://www.linkedin.com/in/arushrao/" target="_blank"
+       class="icon-link large" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0
+        3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0
+        8h5v16H0zM7.5 8h4.7v2.2h.1c.65-1.2
+        2.25-2.45 4.65-2.45 4.95 0 5.85
+        3.25 5.85 7.45V24h-5v-7.1c0-1.7
+        0-3.9-2.35-3.9-2.35 0-2.7
+        1.8-2.7 3.75V24h-5z"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<button id="back-to-top" aria-label="Back to top">↑</button>
+
+<script>
+  lucide.createIcons();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heat Diffusion Simulation | Arush Rao</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Floating Navigation -->
+<nav id="floating-nav">
+  <a href="index.html#about" class="nav-btn">About</a>
+  <a href="index.html#projects" class="nav-btn">Projects</a>
+  <a href="resume.html" class="nav-btn">Resume</a>
+</nav>
+
+<!-- Theme Toggle -->
+<button id="theme-toggle" aria-label="Toggle light/dark mode">
+  <svg id="sun-icon" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4" />
+    <line x1="12" y1="1" x2="12" y2="4" />
+    <line x1="12" y1="20" x2="12" y2="23" />
+    <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+    <line x1="1" y1="12" x2="4" y2="12" />
+    <line x1="20" y1="12" x2="23" y2="12" />
+    <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+  </svg>
+  <svg id="moon-icon" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+  </svg>
+</button>
+
+<!-- INTRO -->
+<section class="intro fade-in" id="intro">
+
+  <!-- Title -->
+  <div class="sch-title">
+    <h1>Heat Diffusion Simulation</h1>
+  </div>
+
+  <!-- Images -->
+  <div class="sch-images">
+    <img src="heatsimboundary.png" alt="Heat Simulation Boundary" class="sch-image">
+    <img src="heatsim.png" alt="Heat Simulation Results" class="sch-image">
+  </div>
+
+  <!-- Overview + My Role -->
+  <div class="sch-info">
+    <div class="sch-column">
+      <h3>Overview</h3>
+      <ul>
+        <li>Developed a 2D heat diffusion simulation</li>
+        <li>Modeled temperature distribution across a rectangular domain over time</li>
+        <li>Added functionality to simulate an internal heat source</li>
+    </ul>
+    </div>
+
+    <div class="sch-column">
+      <h3>My Role</h3>
+      <ul>
+        <li>Used the finite element method and Python to implement an unsteady heat diffusion equation PDE solver</li>
+        <li>Used explicit time-stepping schemes such as Forward Euler, Heun, and Runge-Kutta 4th order (RK4)</li>
+        <li>Used forward and backward finite differences to calculate the heat flux at each edge</li>
+        <li>Used Matplotlib to visualize the simulation results</li>
+        <li>Analyzed accuracy and convergence of the three time-stepping schemes</li>
+        <li>Used optimization methods to find the ideal location of a specified heat source for the highest average temperature</li>
+    </ul>
+    </div>
+  </div>
+
+  <!-- Skills -->
+<div class="sch-skills">
+  <h3>Skills</h3>
+  <div class="sch-skills-row">
+    <div class="sch-skill-card">Python</div>
+    <div class="sch-skill-card">Numerical Methods</div>
+    <div class="sch-skill-card">FEM</div>
+    <div class="sch-skill-card">Finite Differences</div>
+    <div class="sch-skill-card">Matplotlib</div>
+    <div class="sch-skill-card">Numpy</div>
+  </div>
+</div>
+<br>
+<br>
+
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
