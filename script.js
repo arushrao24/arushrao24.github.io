@@ -1,18 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.getElementById("back-to-top");
-
+  
   // Handle back to top button visibility
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
-  });
-
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  if (backToTop) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+    
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 });
 
 // Theme toggle
@@ -27,7 +29,6 @@ if (savedTheme === "light") {
 
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("light");
-
   if (body.classList.contains("light")) {
     localStorage.setItem("theme", "light");
   } else {
@@ -44,7 +45,6 @@ if (floatingNav) {
   if (hero) {
     window.addEventListener("scroll", () => {
       const heroBottom = hero.getBoundingClientRect().bottom;
-
       if (heroBottom < 0) {
         floatingNav.classList.add("show");
       } else {
@@ -52,19 +52,23 @@ if (floatingNav) {
       }
     });
   } 
-  // PROJECT PAGES behavior (always visible)
+  // PROJECT PAGES behavior (show when scrolled down)
   else {
-    floatingNav.classList.add("show");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        floatingNav.classList.add("show");
+      } else {
+        floatingNav.classList.remove("show");
+      }
+    });
   }
 }
-
 
 // Scroll handling for ALL buttons with data-target attribute
 document.querySelectorAll("[data-target]").forEach(btn => {
   btn.addEventListener("click", () => {
     const targetId = btn.dataset.target;
     const targetSection = document.getElementById(targetId);
-    
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -73,7 +77,6 @@ document.querySelectorAll("[data-target]").forEach(btn => {
 
 // Fade-in animation (repeats on every scroll)
 const fadeElements = document.querySelectorAll(".fade-in");
-
 const fadeInObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
