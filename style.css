@@ -1222,3 +1222,34 @@ body.light h2 i[data-lucide] {
 #floating-nav {
   z-index: 2000;
 }
+
+.card-with-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  opacity: 0.9;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+  .logo {
+    height: 40px;
+  }
+}
+
+.logo {
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.about-card:hover .logo {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
