@@ -1,0 +1,116 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mixed Fastener | Arush Rao</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+<!-- Floating Navigation -->
+<nav id="floating-nav">
+  <a href="index.html#about" class="nav-btn">About</a>
+  <a href="index.html#projects" class="nav-btn">Projects</a>
+  <a href="resume.html" class="nav-btn">Resume</a>
+</nav>
+
+<!-- Theme Toggle -->
+<button id="theme-toggle" aria-label="Toggle light/dark mode">
+  <svg id="sun-icon" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4" />
+    <line x1="12" y1="1" x2="12" y2="4" />
+    <line x1="12" y1="20" x2="12" y2="23" />
+    <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+    <line x1="1" y1="12" x2="4" y2="12" />
+    <line x1="20" y1="12" x2="23" y2="12" />
+    <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+  </svg>
+  <svg id="moon-icon" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+  </svg>
+</button>
+
+<!-- INTRO -->
+<section class="intro fade-in" id="intro">
+
+  <!-- Title -->
+  <div class="sch-title">
+    <h1>Mixed Fastener Risk Identification</h1>
+    <h3>BMW Manufacturing</h3>
+    <p>(No images for confidentiality purposes)</p>
+  </div>
+
+  <!-- Images -->
+  <div class="sch-images">
+    <!-- img src="hytech.png" alt="Hytech Car" class="hyt-image" -->
+  </div>
+
+  <!-- Overview + My Role -->
+  <div class="sch-info">
+    <div class="sch-column">
+      <h3>Overview</h3>
+      <ul>
+        <li>Investigated the risk of visually similar fasteners being mixed on a vehicle assembly line</li>
+        <li>Incorrect fastener installation could result in quality defects, rework, and potential safety concerns</li>
+        <li>Leveraged assembly line layout data and fastener specifications to identify locations vulnerable to mix-up events</li>
+    </ul><br>
+
+    <h3>Key Results</h3>
+    <ul>
+      <li>Developed a Python-based analysis tool to identify assembly stations vulnerable to fastener mix-ups</li>
+      <li>Identified 60+ stations at elevated risk across the production line</li>
+      <li>Automated an analysis process that previously required extensive manual review</li>
+      <li>Collaborated with production, assembly planning, and technology support teams</li>
+      <li>Enabled proactive defect prevention efforts before issues reached production</li>
+      </ul>
+    </div>
+
+    <div class="sch-column">
+      <h3>My Role</h3>
+      <h4>Gathering Data</h4>
+      <ul>
+        <li>Extracted station-level part usage data from assembly line layout software</li>
+        <li>Merged assembly data with fastener specifications from a master parts database using part numbers</li>
+        <li>Cleaned and filtered datasets to retain critical fastener characteristics for analysis</li>
+      </ul><br>
+      <h4>Analysis</h4>
+      <ul>
+        <li>Developed criteria to classify fasteners as potentially interchangeable or visually similar</li>
+        <li>Evaluated attributes including fastener type, dimensions, installation method, and line location</li>
+        <li>Implemented an algorithm to compare all fasteners within a configurable station proximity window along the assembly line</li>
+      </ul><br>
+      <h4>Application & Output</h4>
+      <ul>
+        <li>Processed assembly line layout data through the analysis tool</li>
+        <li>Generated station-level risk reports highlighting vulnerable locations</li>
+        <li>Provided associated part numbers and fastener pairings for engineering review</li>
+        <li>Supported manufacturing teams in prioritizing preventive actions</li>
+      </ul><br>
+    </div>
+  </div>
+
+  <!-- Skills -->
+<div class="sch-skills">
+  <h3>Skills</h3>
+  <div class="sch-skills-row">
+    <div class="sch-skill-card">Python</div>
+    <div class="sch-skill-card">Manufacturing Analytics</div>
+    <div class="sch-skill-card">Defect Prevention Strategies</div>
+    <div class="sch-skill-card">Cross-Team Collaboration</div>
+    <div class="sch-skill-card">Risk Assessment</div>
+    <div class="sch-skill-card">Poka Yoke</div>
+    <div class="sch-skill-card">Systems Thinking</div>
+  </div>
+</div>
+<br>
+<br>
+
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
