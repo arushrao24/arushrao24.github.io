@@ -75,6 +75,16 @@ document.querySelectorAll("[data-target]").forEach(btn => {
   });
 });
 
+// Project card click handling
+document.querySelectorAll(".project-card[data-href]").forEach(card => {
+  card.addEventListener("click", () => {
+    const href = card.dataset.href;
+    if (href) {
+      window.location.href = href;
+    }
+  });
+});
+
 // Fade-in animation (repeats on every scroll)
 const fadeElements = document.querySelectorAll(".fade-in");
 const fadeInObserver = new IntersectionObserver(
