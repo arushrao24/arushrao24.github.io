@@ -506,7 +506,7 @@ a.nav-btn {
 
 .resume-minor {
   font-size: 0.95rem;
-  color: #94a3b8;
+  color: #e5e7eb;
   font-style: italic;
 }
 
@@ -525,7 +525,7 @@ a.nav-btn {
 .resume-bullets li {
   font-size: 1rem;
   line-height: 1.6;
-  color: #cbd5f5;
+  color: #e5e7eb;
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
@@ -605,7 +605,7 @@ body.light .resume-item h3 {
 }
 
 body.light .resume-position {
-  color: #475569;
+  color: #020617;
 }
 
 body.light .resume-minor {
@@ -617,7 +617,7 @@ body.light .resume-date {
 }
 
 body.light .resume-bullets li {
-  color: #475569;
+  color: #020617;
 }
 
 body.light .resume-bullets li::before {
