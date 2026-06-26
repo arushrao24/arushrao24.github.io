@@ -85,6 +85,31 @@ document.querySelectorAll(".project-card[data-href]").forEach(card => {
   });
 });
 
+// Experience card click handling
+document.querySelectorAll(".experience-card[data-href]").forEach(card => {
+  card.addEventListener("click", () => {
+    const href = card.dataset.href;
+    if (href) {
+      window.location.href = href;
+    }
+  });
+});
+
+// Scroll offset for resume anchors
+window.addEventListener("load", () => {
+  const hash = window.location.hash;
+  if (hash) {
+    setTimeout(() => {
+      const target = document.querySelector(hash);
+      if (target) {
+        const offset = 50;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }, 50);
+  }
+});
+
 // Fade-in animation (repeats on every scroll)
 const fadeElements = document.querySelectorAll(".fade-in");
 const fadeInObserver = new IntersectionObserver(
@@ -103,3 +128,25 @@ const fadeInObserver = new IntersectionObserver(
 );
 
 fadeElements.forEach((el) => fadeInObserver.observe(el));
+
+// Typing animation for hero h1 (restart on scroll into view)
+const heroH1 = document.querySelector(".hero h1");
+if (heroH1) {
+  const typingObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Remove and re-add the class to restart the animation
+          heroH1.classList.remove("typing-active");
+          // Trigger reflow to restart animation
+          void heroH1.offsetWidth;
+          heroH1.classList.add("typing-active");
+        }
+      });
+    },
+    {
+      threshold: 0.5
+    }
+  );
+  typingObserver.observe(heroH1);
+}

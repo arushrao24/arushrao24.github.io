@@ -19,8 +19,8 @@ body {
   background-color: black;
 
   background-image:
-    linear-gradient(rgba(255,255,255,0.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.09) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
 
   background-size: 40px 40px;
 }
@@ -80,18 +80,41 @@ body.light button:hover {
 
 .hero-left {
   max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  padding: 28px;
+  border-radius: 0;
+  background-color: transparent;
 }
 
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
   color: #f8fafc;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(248, 250, 252, 0.8);
+  width: 0;
+}
+
+.hero h1.typing-active {
+  animation: typing 2.4s steps(18, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
 .hero p {
   font-size: 1.25rem;
   margin-top: 12px;
   color: #cbd5f5;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 14ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(248, 250, 252, 0.8); }
 }
 
 .hero-buttons {
@@ -115,7 +138,7 @@ body.light button:hover {
   width: 100%;
   max-width: 420px;
   height: auto;
-  border-radius: 16px;
+  border-radius: 4px;
 }
 
 @media (max-width: 900px) {
@@ -154,7 +177,7 @@ body.light button:hover {
   padding: 14px 28px;
   font-size: 1rem;
   font-weight: 500;
-  border-radius: 12px;
+  border-radius: 4px;
   border: none;
   color: white;
   background: transparent;
@@ -180,13 +203,17 @@ body.light button:hover {
 .nav-btn {
   padding: 8px 14px;
   font-size: 0.95rem;
-  color: #cbd5f5;
-  border-radius: 999px;
+  border-radius: 4px;
+  color: inherit;
+  background-color: transparent;
+}
+
+a.nav-btn {
+  text-decoration: none;
 }
 
 .nav-btn:hover {
   background-color: rgba(148, 163, 184, 0.15);
-  color: #f8fafc;
 }
 
 /* =========================
@@ -287,9 +314,13 @@ body.light button:hover {
 .about-card, .project-card {
   background-color: #020617;
   border: 1px solid #1e293b;
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 24px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-card {
+  cursor: pointer;
 }
 
 .about-card:hover, .project-card:hover {
@@ -330,6 +361,25 @@ body.light button:hover {
   padding: 28px;
   flex: 0 0 calc(32.9% - 1rem);
   cursor: pointer;
+  width: 400px;
+}
+
+.project-card-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.project-card-image img {
+  height: 250px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 16px;
 }
 
 .project-card:hover {
@@ -653,7 +703,7 @@ body.light .resume-back {
   right: 24px;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 4px;
   border: 1px solid rgba(148, 163, 184, 0.35);
   background: transparent;
   color: #cbd5f5;
@@ -696,7 +746,7 @@ body.light .resume-back {
   background: rgba(2, 6, 23, 0.7);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(148, 163, 184, 0.25);
-  border-radius: 999px;
+  border-radius: 4px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -718,7 +768,7 @@ body.light .resume-back {
   right: 32px;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: 4px !important;
   border: none;
   background: linear-gradient(135deg, #3b82f6, #2563eb);
   color: white;
@@ -756,6 +806,11 @@ body.light h1, body.light h2, body.light h3 {
 
 body.light p {
   color: #334155;
+}
+
+body.light .hero-left {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.75);
 }
 
 body.light .hero p, body.light .contact p {
@@ -811,12 +866,13 @@ body.light #floating-nav {
 }
 
 body.light .nav-btn {
-  color: #334155;
+  background-color: transparent;
+  color: inherit;
 }
 
 body.light .nav-btn:hover {
   background-color: rgba(15, 23, 42, 0.08);
-  color: #020617;
+  color: inherit;
 }
 
 /* =========================
