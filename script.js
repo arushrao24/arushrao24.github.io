@@ -38,28 +38,30 @@ toggleBtn.addEventListener("click", () => {
 
 // Floating nav visibility
 const floatingNav = document.getElementById("floating-nav");
+const brandIsland = document.querySelector(".brand-island");
 const hero = document.querySelector(".hero");
+
+const setNavVisibility = (shouldShow) => {
+  if (floatingNav) {
+    floatingNav.classList.toggle("show", shouldShow);
+  }
+  if (brandIsland) {
+    brandIsland.classList.toggle("show", shouldShow);
+  }
+};
 
 if (floatingNav) {
   // HOMEPAGE behavior (scroll past hero)
   if (hero) {
     window.addEventListener("scroll", () => {
       const heroBottom = hero.getBoundingClientRect().bottom;
-      if (heroBottom < 0) {
-        floatingNav.classList.add("show");
-      } else {
-        floatingNav.classList.remove("show");
-      }
+      setNavVisibility(heroBottom < 0);
     });
   } 
   // PROJECT PAGES behavior (show when scrolled down)
   else {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        floatingNav.classList.add("show");
-      } else {
-        floatingNav.classList.remove("show");
-      }
+      setNavVisibility(window.scrollY > 100);
     });
   }
 }
@@ -74,6 +76,22 @@ document.querySelectorAll("[data-target]").forEach(btn => {
     }
   });
 });
+
+const brandIslandLink = document.querySelector(".brand-island a");
+if (brandIslandLink) {
+  brandIslandLink.addEventListener("click", (event) => {
+    const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
+    if (isHomePage) {
+      event.preventDefault();
+      const topSection = document.getElementById("top");
+      if (topSection) {
+        topSection.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  });
+}
 
 // Project card click handling
 document.querySelectorAll(".project-card[data-href]").forEach(card => {

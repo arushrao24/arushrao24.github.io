@@ -760,6 +760,33 @@ body.light .resume-back {
   transform: translateX(-50%) translateY(0);
 }
 
+.brand-island {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+  border: 1px solid rgba(248, 250, 252, 0.8);
+  background: transparent;
+  backdrop-filter: blur(12px);
+  border-radius: 2px;
+  padding: 10px 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.brand-island.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.brand-island a {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #f8fafc;
+  text-decoration: none;
+}
+
 /* =========================
    Back to Top
    ========================= */
@@ -874,6 +901,15 @@ body.light .nav-btn {
 body.light .nav-btn:hover {
   background-color: rgba(15, 23, 42, 0.08);
   color: inherit;
+}
+
+body.light .brand-island a {
+  color: #0f172a;
+}
+
+body.light .brand-island {
+  background: rgba(248, 250, 252, 0.8);
+  border-color: rgba(15, 23, 42, 0.2);
 }
 
 /* =========================
