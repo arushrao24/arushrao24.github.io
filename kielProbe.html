@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiel Probe | Arush Rao</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Floating Navigation -->
+<div class="brand-island">
+  <a href="index.html#top"><strong>Arush Rao</strong></a>
+</div>
+<nav id="floating-nav">
+  <a href="index.html#about" class="nav-btn">About</a>
+  <a href="index.html#projects" class="nav-btn">Projects</a>
+  <a href="resume.html" class="nav-btn">Resume</a>
+</nav>
+
+<!-- Theme Toggle -->
+<button id="theme-toggle" aria-label="Toggle light/dark mode">
+  <svg id="sun-icon" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4" />
+    <line x1="12" y1="1" x2="12" y2="4" />
+    <line x1="12" y1="20" x2="12" y2="23" />
+    <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+    <line x1="1" y1="12" x2="4" y2="12" />
+    <line x1="20" y1="12" x2="23" y2="12" />
+    <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+  </svg>
+  <svg id="moon-icon" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+  </svg>
+</button>
+
+<!-- INTRO -->
+<section class="intro fade-in" id="intro">
+
+  <!-- Title -->
+  <div class="sch-title">
+    <h1>Kiel Probe Design & Integration (In Progress)</h1>
+    <h3>Hytech Racing (FSAE EV)</h3>
+  </div>
+
+  <!-- Images -->
+  <div class="sch-images">
+    <img src="kielProbe.png" alt="CAD model of the modified Kiel probe" class="hyt-image">
+    <img src="printedProbe.jpeg" alt="Printed probe" class="hyt-image">
+  </div>
+
+  <!-- Overview + My Role -->
+  <div class="sch-info">
+    <div class="sch-column">
+      <h3>Overview</h3>
+      <ul>
+        <li>Led the design, simulation, prototyping, and wind tunnel test integration of Kiel probes for Hytech Racing</li>
+        <li>A Kiel probe uses a shroud to straighten incoming airflow, making it less sensitive to flow angle than a standard pitot probe</li>
+        <li>Will measure total pressure on the car (one sensor for speed), but is mainly intended for wind tunnel testing and aero rake testing</li>
+      </ul><br>
+
+      <h3>Key Results</h3>
+      <ul>
+        <li>Modified probe geometry and validated it in Ansys Fluent: yaw-insensitive up to 40 deg</li>
+        <li>Designing and building a mount for Georgia Tech's low turbulence wind tunnel (LTWT) to validate the probe experimentally</li>
+        <li>Prototyped probes with resin 3D printing and identified surface finish and small-channel tolerances as the key manufacturing risks</li>
+      </ul><br>
+
+      <h3>Next Steps</h3>
+      <ul>
+        <li>Wind tunnel validation of the probe in the LTWT</li>
+        <li>Redesign the probe to screw onto an aero rake-incorporated mount</li>
+      </ul>
+    </div>
+
+    <div class="sch-column">
+      <h3>My Role</h3>
+      <h4>Probe Modifications</h4>
+      <ul>
+        <li>Started from an open-source Kiel probe CAD model and reworked the internal channel from a T-junction to a bent corner</li>
+        <li>Added fillets to the outer body</li>
+        <li>Designing a screw-on version of the probe to mount to the aero rake</li>
+      </ul><br>
+      <h4>Simulation & Validation</h4>
+      <ul>
+        <li>Ran Ansys Fluent simulations of the modified geometry across yaw angles</li>
+        <li>Confirmed yaw-insensitive total pressure readings up to 40 deg</li>
+      </ul><br>
+      <h4>Manufacturing</h4>
+      <ul>
+        <li>Resin 3D printed prototype probes, passing air through the internal channel before curing to keep it clear</li>
+        <li>Found surface bumps on the first prototypes that require sanding</li>
+        <li>Monitoring tolerances and potential defects in the 1.2 mm ID internal channel</li>
+      </ul><br>
+      <h4>Wind Tunnel Test Setup & Integration</h4>
+      <ul>
+        <li>Designing and building a mount to hold the probe in the LTWT</li>
+        <li>Integrating tubing and a pressure sensor into the mount</li>
+        <li>Interfacing the mount with the tunnel's built-in mounting plate</li>
+      </ul><br>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="sch-skills">
+    <h3>Skills</h3>
+    <div class="sch-skills-row">
+      <div class="sch-skill-card">Ansys Fluent</div>
+      <div class="sch-skill-card">CAD Modeling</div>
+      <div class="sch-skill-card">Aerodynamic Validation</div>
+      <div class="sch-skill-card">Wind Tunnel Testing</div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

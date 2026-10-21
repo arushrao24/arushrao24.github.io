@@ -1,0 +1,106 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variable Nozzle | Arush Rao</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+<!-- Floating Navigation -->
+<div class="brand-island">
+  <a href="index.html#top"><strong>Arush Rao</strong></a>
+</div>
+<nav id="floating-nav">
+  <a href="index.html#about" class="nav-btn">About</a>
+  <a href="index.html#projects" class="nav-btn">Projects</a>
+  <a href="resume.html" class="nav-btn">Resume</a>
+</nav>
+
+<!-- Theme Toggle -->
+<button id="theme-toggle" aria-label="Toggle light/dark mode">
+  <svg id="sun-icon" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4" />
+    <line x1="12" y1="1" x2="12" y2="4" />
+    <line x1="12" y1="20" x2="12" y2="23" />
+    <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+    <line x1="1" y1="12" x2="4" y2="12" />
+    <line x1="20" y1="12" x2="23" y2="12" />
+    <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+  </svg>
+  <svg id="moon-icon" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+  </svg>
+</button>
+
+<!-- INTRO -->
+<section class="intro fade-in" id="intro">
+
+  <!-- Title -->
+  <div class="sch-title">
+    <h1>Variable Nozzle Test Control Program</h1>
+    <h3>Georgia Tech Supersonics Club (GTSC)</h3>
+  </div>
+
+  <!-- Images -->
+  <div class="sch-images">
+    <img src="varNozzle.png" alt="Variable Nozzle CAD" class="hyt-image">
+  </div>
+
+  <!-- Overview + My Role -->
+  <div class="sch-info">
+    <div class="sch-column">
+      <h3>Overview</h3>
+      <ul>
+        <li>Contributed to variable nozzle development and test preparations</li>
+    </ul><br>
+
+    <h3>Key Results</h3>
+    <ul>
+      <li>Wrote a control sequence to use during testing for the afterburner's variable nozzle</li>
+      <li>Used hand calcs to verify flow area goals and used Arduino to develop code</li>
+    </ul>
+    </div>
+
+    <div class="sch-column">
+      <h3>My Role</h3>
+      <h4>Hand Calculations</h4>
+      <ul>
+        <li>Obtained previously calculated flow area goals for open and closed configurations of the variable nozzle</li>
+        <li>Derived actution angles from target nozzle areas and geometry</li>
+        <li>Translated flow areas into mechanical positions</li>
+      </ul><br>
+      <h4>Integration</h4>
+      <ul>
+        <li>Coupled angle calculations with motor specs (speed, RPM, torque)</li>
+        <li>Determined actuation control paramters and ensured interface with motor driver</li>
+      </ul><br>
+      <h4>Program Development</h4>
+      <ul>
+        <li>Wrote Arduino-based code to drive nozzle through commanded positions</li>
+        <li>Included user-adjustable parameters to to open/close the nozzle to a fraction of the target position for controlled testing</li>
+      </ul><br>
+    </div>
+  </div>
+
+  <!-- Skills -->
+<div class="sch-skills">
+  <h3>Skills</h3>
+  <div class="sch-skills-row">
+    <div class="sch-skill-card">SolidWorks</div>
+    <div class="sch-skill-card">Mechatronics Interfaces</div>
+    <div class="sch-skill-card">Arduino</div>
+  </div>
+</div>
+<br>
+<br>
+
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

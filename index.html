@@ -55,6 +55,7 @@
     <div class="hero-interest-icons">
       <i data-lucide="settings"></i>
       <i data-lucide="car"></i>
+      <i data-lucide="rocket"></i>
       <i data-lucide="plane"></i>
     </div>
 
@@ -97,8 +98,11 @@
   <h2>About Me <i data-lucide="user"></i></h2>
 
   <!-- ROW 1: Bio + Education -->
+  
   <div class="about-grid">
+    
     <div class="about-content">
+      <h3 class="section-label">Bio</h3>
       <p>
         Ever since I was young, I have been fascinated by things that move.
         Cars, planes, rockets and trains all captured my imagination and curiosity.
@@ -138,12 +142,25 @@
     <div>
       <h3 class="section-label">Experience <i data-lucide="building"></i></h3>
       <div class="stacked-cards">
+        
+        <div class="about-card fade-in experience-card" data-href="resume.html#hytech-racing">
+          <div class="card-with-logo">
+            <div>
+              <h4>Hytech Racing</h4>
+              <p>Aerodynamicist and Mechanical Design Engineer for FSAE EV</p>
+              <span>August 2024 - Present</span>
+            </div>
+
+            <img src="hytechlogo.jpeg" alt="Company Logo" class="logo">
+          </div>
+        </div>
+        
         <div class="about-card fade-in experience-card" data-href="resume.html#ben-zinn-combustion-laboratory">
           <div class="card-with-logo">
             <div>
               <h4>Ben T. Zinn Combustion Laboratory</h4>
               <p>High-pressure combustion testing</p>
-              <span>May 2026 - Present</span>
+              <span>May 2026 - Aug 2026</span>
             </div>
 
             <img src="btz.jpeg" alt="Company Logo" class="logo">
@@ -159,18 +176,6 @@
             </div>
 
             <img src="bmwlogo.jpg" alt="Company Logo" class="logo">
-          </div>
-        </div>
-
-        <div class="about-card fade-in experience-card" data-href="resume.html#hytech-racing">
-          <div class="card-with-logo">
-            <div>
-              <h4>Hytech Racing</h4>
-              <p>Aerodynamicist for Formula SAE EV team</p>
-              <span>August 2024 - Present</span>
-            </div>
-
-            <img src="hytechlogo.jpeg" alt="Company Logo" class="logo">
           </div>
         </div>
 
@@ -217,12 +222,30 @@
   <h2>Projects <i data-lucide="wrench"></i></h2>
   <div class="projects-grid">
 
+    <div class="project-card fade-in" data-href="kielProbe.html">
+      <h3>Kiel Probe Design & Integration</h3>
+      <p>Pressure probe validation for aero rake and wind tunnel testing</p>
+      <br>
+      <div class="project-card-image">
+        <img src="kielProbe.png" alt="Kiel Probe" />
+      </div>
+    </div>
+
     <div class="project-card fade-in" data-href="rwe3.html">
       <h3>FSAE Rear Wing 3rd Element</h3>
       <p>Full design evaluation for an additional rear wing element</p>
       <br>
       <div class="project-card-image">
         <img src="flicker.png" alt="RW in Flicker" />
+      </div>
+    </div>
+
+    <div class="project-card fade-in" data-href="varNozzle.html">
+      <h3>Variable Nozzle Control Code</h3>
+      <p>Arduino control code for a variable nozzle on a supersonic afterburner</p>
+      <br>
+      <div class="project-card-image">
+        <img src="varNozzle.png" alt="Variable Nozzle CAD" />
       </div>
     </div>
 
