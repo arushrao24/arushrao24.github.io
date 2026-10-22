@@ -193,6 +193,16 @@ body.light .scroll-cue:hover {
 }
 
 @media (max-width: 900px) {
+  .hero h1,
+  .hero h1.typing-active {
+    width: auto;
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+    border-right: 0;
+    animation: none;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
