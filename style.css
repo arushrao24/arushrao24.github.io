@@ -22,7 +22,7 @@ body {
     linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
 
-  background-size: 40px 40px;
+  background-size: 55px 55px;
 }
 
 body * {
@@ -139,6 +139,57 @@ body.light button:hover {
   max-width: 420px;
   height: auto;
   border-radius: 4px;
+}
+
+.scroll-cue {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(248, 250, 252, 0.65);
+  border-radius: 4px;
+  background-color: rgba(2, 6, 23, 0.8);
+  color: #f8fafc;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, box-shadow 0.2s ease;
+}
+
+.scroll-cue.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.scroll-cue:hover {
+  background-color: rgba(2, 6, 23, 0.8);
+  transform: translateX(-50%) translateY(0) scale(1.06);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.scroll-cue svg {
+  width: 20px;
+  height: 20px;
+}
+
+body.light .scroll-cue {
+  border-color: rgba(15, 23, 42, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #020617;
+}
+
+body.light .scroll-cue:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.2);
 }
 
 @media (max-width: 900px) {
@@ -289,6 +340,7 @@ a.nav-btn {
 }
 
 .about-grid.secondary {
+  grid-template-columns: 1.2fr 0.75fr;
   margin-top: 72px;
 }
 
@@ -321,7 +373,66 @@ a.nav-btn {
 }
 
 .experience-card {
+  position: relative;
   cursor: pointer;
+}
+
+.about-grid.secondary > div:first-child .stacked-cards {
+  position: relative;
+  padding-left: 40px;
+  --timeline-gap: 24px;
+  gap: var(--timeline-gap);
+}
+
+.about-grid.secondary > div:first-child .stacked-cards::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 33px;
+  bottom: 33px;
+  width: 2px;
+  background-color: currentColor;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 25px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background-color: #020617;
+  z-index: 1;
+}
+
+.about-grid.secondary > div:first-child .stacked-cards > .experience-card:first-child::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  bottom: calc(0px - var(--timeline-gap));
+  width: 4px;
+  height: var(--timeline-gap);
+  background-color: #020617;
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1.2px);
+  background-position: center;
+  background-size: 4px 6px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+body.light .about-grid.secondary > div:first-child .stacked-cards > .experience-card:first-child::after {
+  background-color: #fff;
+}
+
+.about-grid.secondary > div:first-child .experience-card:hover::before {
+  background-color: #020617;
+}
+
+body.light .experience-card::before,
+body.light .about-grid.secondary > div:first-child .experience-card:hover::before {
+  background-color: #fff;
 }
 
 .about-card:hover, .project-card:hover {
@@ -332,6 +443,35 @@ a.nav-btn {
 .about-card h4 {
   margin-bottom: 10px;
   color: #e5e7eb;
+}
+
+.organization-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.organization-title h4 {
+  margin: 0;
+}
+
+.about-card .position-status {
+  flex: 0 0 auto;
+  padding: 3px 8px;
+  border: 1px solid rgba(134, 239, 172, 0.4);
+  border-radius: 3px;
+  background-color: rgba(34, 197, 94, 0.12);
+  color: #86efac;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+body.light .about-card .position-status {
+  border-color: #86efac;
+  background-color: #f0fdf4;
+  color: #166534;
 }
 
 .about-card p, .about-card li {
@@ -919,6 +1059,10 @@ body.light .brand-island {
   .about-grid {
     grid-template-columns: 1fr;
   }
+
+  .about-grid.secondary {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================
@@ -1087,6 +1231,15 @@ body.light .project-subtitle {
   max-height: 420px;   /* optional: keeps them from getting huge */
   width: auto;
   max-width: 345px;
+  border-radius: 18px;
+}
+
+.kiel-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
   border-radius: 18px;
 }
 

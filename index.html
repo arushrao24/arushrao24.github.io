@@ -47,7 +47,7 @@
 <header class="hero" id="top">
   <!-- LEFT: Text Content -->
   <div class="hero-left">
-    <h1>Hi, I'm Arush Rao</h1>
+    <h1>Hi, I'm Arush Rao.</h1>
     <br>
     <h3>Junior at Georgia Tech | B.S. Mechanical Engineering</h3>
     <br>
@@ -89,8 +89,12 @@
 
   <!-- RIGHT: Image -->
   <div class="hero-right">
-    <img src="headshot.jpeg" alt="Headshot of Arush Rao" class="hero-image">
+    <img src="headshot_compressed.jpg" alt="Headshot of Arush Rao" class="hero-image">
   </div>
+
+  <button class="scroll-cue" id="scroll-to-about" type="button" data-target="about" aria-label="Scroll to About section" title="Scroll to About">
+    <i data-lucide="arrow-down" aria-hidden="true"></i>
+  </button>
 </header>
 
 <!-- ABOUT -->
@@ -127,7 +131,7 @@
               <p>Minor in Computational Data Analysis</p>
               <br>
               <p>Grade: Junior | GPA: 4.0</p>
-              <span>Graduating May 2028</span>
+              <span>Graduating Aug 2028</span>
             </div>
 
             <img src="gtlogo.png" alt="Company Logo" class="logo">
@@ -142,19 +146,51 @@
     <div>
       <h3 class="section-label">Experience <i data-lucide="building"></i></h3>
       <div class="stacked-cards">
+
+        <div class="about-card fade-in experience-card" data-href="resume.html">
+          <div class="card-with-logo">
+            <div>
+              <h4>SpaceX (Incoming)</h4>
+              <p>Starship wiring harness manufacturing & testing</p>
+              <span>Incoming Spring 2027</span>
+            </div>
+
+            <img src="spacexLogo.svg" alt="Company Logo" class="logo">
+          </div>
+        </div>
+
         
+
+        <div class="about-card fade-in experience-card" data-href="resume.html">
+          <div class="card-with-logo">
+            <div>
+              <div class="organization-title">
+                <h4>GT Supersonics Club</h4>
+                <span class="position-status">Current</span>
+              </div>
+              <p>Afterburner-test stand integration</p>
+              <span>July 2026 - Present</span>
+            </div>
+
+            <img src="gtsc.jpeg" alt="Company Logo" class="logo">
+          </div>
+        </div>
+
         <div class="about-card fade-in experience-card" data-href="resume.html#hytech-racing">
           <div class="card-with-logo">
             <div>
-              <h4>Hytech Racing</h4>
-              <p>Aerodynamicist and Mechanical Design Engineer for FSAE EV</p>
+              <div class="organization-title">
+                <h4>Hytech Racing</h4>
+                <span class="position-status">Current</span>
+              </div>
+              <p>Aerodynamicist and mechanical design engineer for FSAE EV</p>
               <span>August 2024 - Present</span>
             </div>
 
             <img src="hytechlogo.jpeg" alt="Company Logo" class="logo">
           </div>
         </div>
-        
+
         <div class="about-card fade-in experience-card" data-href="resume.html#ben-zinn-combustion-laboratory">
           <div class="card-with-logo">
             <div>
@@ -180,16 +216,29 @@
         </div>
 
         <div class="about-card fade-in experience-card" data-href="resume.html#exascale-cfd">
-          <h4>Exascale CFD</h4>
-          <p>Studied LRE injector behavior and combustion</p>
-          <span>August 2025 - Dec 2025</span>
+          <div class="card-with-logo">
+            <div>
+              <h4>Exascale CFD</h4>
+              <p>Studied LRE injector behavior and combustion</p>
+              <span>August 2025 - Dec 2025</span>
+            </div>
+
+            <img src="gtlogo.png" alt="Company Logo" class="logo">
+          </div>
         </div>
 
         <div class="about-card fade-in experience-card" data-href="resume.html#advanced-manufacturing-pilot-facility">
-          <h4>Advanced Manufacturing Pilot Facility</h4>
-          <p>Built a DED additive manufacturing testing & characterization system</p>
-          <span>February 2025 - Dec 2025</span>
+          <div class="card-with-logo">
+            <div>
+              <h4>Advanced Manufacturing Pilot Facility</h4>
+              <p>Built a DED additive manufacturing testing & characterization system</p>
+              <span>February 2025 - Dec 2025</span>
+            </div>
+
+            <img src="gtlogo.png" alt="Company Logo" class="logo">
+          </div>
         </div>
+
       </div>
     </div>
 
@@ -206,7 +255,7 @@
         </div>
         <div class="about-card fade-in">
           <h4>Programming & Analysis</h4>
-          <p>Python, MATLAB, Java, Arduino, Microsoft Excel</p>
+          <p>Python, MATLAB, Java, Arduino, SQL</p>
         </div>
         <div class="about-card fade-in">
           <h4>Fabrication</h4>

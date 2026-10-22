@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.getElementById("back-to-top");
+  const scrollCue = document.getElementById("scroll-to-about");
+
+  if (scrollCue) {
+    let scrollCueReady = false;
+
+    window.setTimeout(() => {
+      scrollCueReady = true;
+      scrollCue.classList.toggle("show", window.scrollY <= 80);
+    }, 3000);
+
+    window.addEventListener("scroll", () => {
+      scrollCue.classList.toggle("show", scrollCueReady && window.scrollY <= 80);
+    }, { passive: true });
+  }
   
   // Handle back to top button visibility
   if (backToTop) {
@@ -120,7 +134,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       const target = document.querySelector(hash);
       if (target) {
-        const offset = 50;
+        const offset = 90;
         const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: "smooth" });
       }
