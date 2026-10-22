@@ -163,7 +163,7 @@ fadeElements.forEach((el) => fadeInObserver.observe(el));
 
 // Typing animation for hero h1 (restart on scroll into view)
 const heroH1 = document.querySelector(".hero h1");
-if (heroH1 && !window.matchMedia("(max-width: 900px)").matches) {
+if (heroH1 && !window.matchMedia("(max-width: 900px), (pointer: coarse)").matches) {
   const typingObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

@@ -226,6 +226,18 @@ body.light .scroll-cue:hover {
   }
 }
 
+@media (pointer: coarse) {
+  .hero h1,
+  .hero h1.typing-active {
+    width: auto;
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+    border-right: 0;
+    animation: none;
+  }
+}
+
 
 /* =========================
    Buttons
