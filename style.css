@@ -395,8 +395,11 @@ a.nav-btn {
 }
 
 .experience-card {
-  position: relative;
   cursor: pointer;
+}
+
+.timeline-item {
+  position: relative;
 }
 
 .about-grid.secondary > div:first-child .stacked-cards {
@@ -416,7 +419,7 @@ a.nav-btn {
   background-color: currentColor;
 }
 
-.experience-card::before {
+.timeline-item::before {
   content: "";
   position: absolute;
   left: -36px;
@@ -429,7 +432,7 @@ a.nav-btn {
   z-index: 1;
 }
 
-.about-grid.secondary > div:first-child .stacked-cards > .experience-card:first-child::after {
+.about-grid.secondary > div:first-child .stacked-cards > .timeline-item:first-child::after {
   content: "";
   position: absolute;
   left: -30px;
@@ -444,16 +447,11 @@ a.nav-btn {
   z-index: 2;
 }
 
-body.light .about-grid.secondary > div:first-child .stacked-cards > .experience-card:first-child::after {
+body.light .about-grid.secondary > div:first-child .stacked-cards > .timeline-item:first-child::after {
   background-color: #fff;
 }
 
-.about-grid.secondary > div:first-child .experience-card:hover::before {
-  background-color: #020617;
-}
-
-body.light .experience-card::before,
-body.light .about-grid.secondary > div:first-child .experience-card:hover::before {
+body.light .timeline-item::before {
   background-color: #fff;
 }
 
@@ -462,7 +460,7 @@ body.light .about-grid.secondary > div:first-child .experience-card:hover::befor
   box-shadow: 0 15px 30px rgba(15, 23, 42, 0.7);
 }
 
-.experience-card.fade-in:hover {
+.experience-card:hover {
   transform: translateY(-4px) scale(1.02);
 }
 
